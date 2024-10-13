@@ -1,0 +1,37 @@
+{
+    "resume": "Passionate about creating intuitive and visually stunning web experiences, I specialize in frontend development, bringing designs to life with pixel-perfect precision. Proficient in HTML, CSS, and JavaScript, I thrive on the challenges of crafting responsive and interactive user interfaces. With expertise in modern frameworks like React and Vue.js, I excel at building dynamic web applications that engage and delight users. A collaborative team player, I enjoy working closely with designers and backend developers to deliver seamless and impactful digital solutions. Constantly exploring new technologies and design trends, I am dedicated to pushing the boundaries of frontend development to create memorable online experiences.",
+    "information": "Informations",
+    "skills": "Skills",
+    "language": "Language",
+    "about": "About me",
+    "experience": "Experience",
+    "volunteer": "Volunteer",
+    "education": "Education",
+    "license": "Licenses and Certificates",
+    "project": "Projects",
+    "credential": "Credential",
+    "credential_code": "Credential Code",
+    "settings": {
+      "title": "Settings",
+      "theme": "Theme",
+      "dark_mode": "Enable dark mode?",
+      "mk": "Macedonian",
+      "en": "English"
+    },
+    "menu": {
+      "experience": "Experience",
+      "education": "Education",
+      "project": "Projects"
+    },
+    "language_level": {
+      "conversational": "Conversational",
+      "native": "Native"
+    },
+    "paginate": {
+      "count": "Showing {first} to {last} of {total} results",
+      "previous_page": "Previous page",
+      "next_page": "Next page",
+      "first_page": "First page",
+      "last_page": "last page"
+    }
+  }

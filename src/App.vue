@@ -1,47 +1,35 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
+// Components
+import Profile from './components/left-content/ProfileCard.vue'
+import InformationsCard from './components/left-content/InformationsCard.vue'
+import SkillsCard from './components/left-content/SkillsCard.vue'
+import LanguagesCard from './components/left-content/LanguagesCard.vue'
+import About from './components/right-content/AboutMe.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <!-- Main -->
+  <div class="container mx-auto max-w-6xl px-4 py-4">
+    <!-- Content -->
+    <div class="gap-5 sm:grid lg:grid-cols-3">
+      <!-- Left Content -->
+      <div class="space-y-5">
+        <Profile />
+        <InformationsCard />
+        <SkillsCard />
+        <LanguagesCard />
+      </div>
+      <!-- Right Content -->
+      <div class="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
+        <About />
+        <RouterView />
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
