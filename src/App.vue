@@ -1,11 +1,11 @@
 <script setup>
-import { RouterView } from 'vue-router'
 // Components
 import Profile from './components/left-content/ProfileCard.vue'
 import InformationsCard from './components/left-content/InformationsCard.vue'
 import SkillsCard from './components/left-content/SkillsCard.vue'
 import LanguagesCard from './components/left-content/LanguagesCard.vue'
 import About from './components/right-content/AboutMe.vue'
+import TabListCard from './components/right-content/TabListCard.vue'
 
 </script>
 
@@ -24,7 +24,8 @@ import About from './components/right-content/AboutMe.vue'
       <!-- Right Content -->
       <div class="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
         <About />
-        <RouterView />
+        <!-- <RouterView /> -->
+        <TabListCard />
       </div>
     </div>
   </div>
