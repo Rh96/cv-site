@@ -1,1 +1,0 @@
-import{_ as r}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as o,a as t,o as s}from"./index-mI_XLdmj.js";const n={},a={class:"rounded-xl p-7 bg-white dark:bg-slate-700/30"};function c(d,e){return s(),o("div",a,e[0]||(e[0]=[t("h1",null,"Expirience",-1)]))}const _=r(n,[["render",c]]);export{_ as default};
