@@ -60,7 +60,6 @@ const licensesList = [
                             </div>
                         </div>
                     </div>
-                    <div class="border-b border-dashed border-gray-200 dark:border-slate-600"></div>
                 </div>
             </div>
         </div>

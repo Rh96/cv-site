@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-    /* .card {
-      @apply rounded-xl bg-white p-7 dark:bg-night-800;
-    } */
-    .badge {
-      @apply inline-flex rounded-lg px-2 py-1 text-xs font-medium;
-    }
+  /* .card {
+    @apply rounded-xl bg-white p-7 dark:bg-night-800;
+  } */
+  .badge {
+    @apply inline-flex rounded-lg px-2 py-1 text-xs font-medium;
   }
+}
+
+@font-face {
+  font-family: 'Ubuntu Regular';
+  src: url("./fonts/Ubuntu-R.ttf");
+}

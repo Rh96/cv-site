@@ -1,5 +1,5 @@
 <script setup>
-const skills = ['HTML', 'CSS', 'Javascript', 'JQuery', 'Bootsrap', 'Tailwindcss', 'Vue', 'React', 'Git']
+const skills = ['HTML', 'CSS', 'Javascript', 'JQuery', 'Bootsrap', 'Sass', 'Tailwindcss', 'Vue', 'React', 'C#', 'MS SQL Server', 'Git']
 </script>
 
 <template>

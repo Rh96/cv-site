@@ -3,9 +3,11 @@
 import { BriefcaseIcon, MapPinIcon, CalendarIcon } from '@heroicons/vue/24/solid'
 // import PaginationTemplate from './components/PaginationTemplate.vue'
 import playercoachLogo from '@/assets/svg/playercoach.png'
+import nativeTeamsLogo from '@/assets/svg/native-teams.svg'
 
 const experienceList = [
-    { id: 1, jobPosition: 'Front-End Developer', companyName: 'PlayerCoach', companyLocation: 'Canada', jobType: 'remote', startJob: 'Oct 2021 - Current', companyAvatar: playercoachLogo, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' }
+    { id: 1, jobPosition: 'Front-End Developer', companyName: 'PlayerCoach', companyLocation: 'Canada', jobType: 'remote', startJob: 'Oct 2021 - Current', companyAvatar: playercoachLogo, description: 'PlayerCoach is a web application that offers digitalization of sports by enabling online booking and payment for training sessions, taking courses, following channels of desired athletes, competition leaderboards, a place for social interaction, and motivating players to visit the field more frequently.' },
+    { id: 2, jobPosition: 'Front-End Developer', companyName: 'Native Teams', companyLocation: 'North Macedonia', jobType: 'fulltime', startJob: 'Feb 2023 - Current', companyAvatar: nativeTeamsLogo, description: 'Native Teams is empowering freelancers, remote workers and their employers with global work payments, payroll and tax management solutions, including employee benefits, visa support and employment tools. Everything you need to work remotely and stay compliant.' }
 ]
 
 // let currentPage = ref(1)
