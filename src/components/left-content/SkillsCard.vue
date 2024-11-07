@@ -1,11 +1,18 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-const skills = ['HTML', 'CSS', 'Javascript', 'JQuery', 'Bootsrap', 'Sass', 'Tailwindcss', 'Vue', 'React', 'C#', 'MS SQL Server', 'Git']
+defineOptions({
+    name: 'Skills',
+})
+
+// Variables
+const skills = ['HTML', 'CSS', 'Javascript', 'JQuery', 'Bootsrap', 'Sass', 'Tailwindcss', 'Vue', 'React', 'C#', 'Microsoft SQL Server', 'Git']
 </script>
 
 <template>
     <div class="rounded-xl p-7 bg-white dark:bg-slate-700/30">
         <h2 class="mb-4 text-lg font-semibold dark:text-slate-50">{{ $t('skills') }}</h2>
 
+        <!-- List of Skills -->
         <div class="-m-2 flex flex-wrap">
             <span
                 v-for="(skill, index) in skills"
