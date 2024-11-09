@@ -1,12 +1,20 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-// import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { LinkIcon } from '@heroicons/vue/24/solid'
 // import PaginationTemplate from './components/PaginationTemplate.vue'
 import waveOnTheWay from '@/assets/svg/wave_on_the_way.jpg'
 import spaceMates from '@/assets/svg/spaceMates.jpg'
 import globalGameJam2021 from '@/assets/svg/globalGameJam2021.png'
 import unityEngineLogo from '@/assets/svg/unity-engine.svg'
+import unityEngineWhiteLogo from '@/assets/svg/unity-engine-white.svg'
 
+defineOptions({
+    name: 'Projects',
+})
+
+// Variables
+const isDarkMode = ref(false);
 const projectsList = [
     {
         id: 1,
@@ -17,6 +25,7 @@ const projectsList = [
         gameEngine: {
             name: 'Unity Engine',
             icon: unityEngineLogo,
+            icon2: unityEngineWhiteLogo,
         },
         achievement: true,
     },
@@ -29,6 +38,7 @@ const projectsList = [
         gameEngine: {
             name: 'Unity Engine',
             icon: unityEngineLogo,
+            icon2: unityEngineWhiteLogo,
         },
         achievement: false,
     },
@@ -41,6 +51,7 @@ const projectsList = [
         gameEngine: {
             name: 'Unity Engine',
             icon: unityEngineLogo,
+            icon2: unityEngineWhiteLogo,
         },
         achievement: false,
     },
@@ -57,6 +68,24 @@ const projectsList = [
 // function updatedCurrentPage(updatedCurrentPageParam) {
 //     currentPage.value = updatedCurrentPageParam
 // }
+
+// Hooks
+onMounted(() => {
+  const htmlRoot = document.getElementById('html-root')
+  isDarkMode.value = htmlRoot.classList.contains('dark')
+
+  // Observe for class changes on html-root
+  const observer = new MutationObserver(() => {
+    isDarkMode.value = htmlRoot.classList.contains('dark')
+  })
+
+  observer.observe(htmlRoot, { attributes: true, attributeFilter: ['class'] })
+
+  // Cleanup on unmount
+  onUnmounted(() => {
+    observer.disconnect();
+  })
+});
 </script>
 
 <template>
@@ -79,7 +108,16 @@ const projectsList = [
                         <div class="font-medium dark:text-slate-50">{{ project.name }}</div>
                         <div class="flex space-x-5 text-gray-400 dark:text-slate-400">
                             <div class="flex items-center gap-1 text-sm font-medium">
-                                <img :src="project.gameEngine.icon" class="h-4 w-4 shrink-0 stroke-2" />
+                                <img
+                                    v-if="project.gameEngine.icon2"
+                                    :src="isDarkMode ? project.gameEngine.icon2 : project.gameEngine.icon"
+                                    class="h-4 w-4 shrink-0 stroke-2"
+                                />
+                                <img
+                                    v-else
+                                    :src="project.gameEngine.icon"
+                                    class="h-4 w-4 shrink-0 stroke-2"
+                                />
                                 <span>{{ project.gameEngine.name }}</span>
                             </div>
                         </div>
@@ -93,11 +131,11 @@ const projectsList = [
                 </p>
                 <a
                     :href="project.link"
-                    class="inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 border-gray-100 px-2 py-1.5 text-xs font-medium text-gray-400 hover:border-primary-500 hover:bg-primary-500 hover:text-white dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500"
+                    class="inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 border-gray-100 px-2 py-1.5 text-xs font-medium text-gray-400 hover:border-sky-500 hover:bg-sky-500 hover:text-white dark:border-slate-700 dark:text-slate-400 dark:hover:border-sky-500 dark:hover:bg-sky-500/20 dark:hover:text-sky-500"
                     target="_blank"
                 >
                     <LinkIcon class="h-4 w-4 shrink-0 stroke-2" />
-                    <span>{{ project.name.toLowerCase() }}</span>
+                    <span>Link</span>
                 </a>
             </div>
         </div>

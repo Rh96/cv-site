@@ -1,4 +1,8 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+defineOptions({
+    name: 'About',
+})
 </script>
 
 <template>

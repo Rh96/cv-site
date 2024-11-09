@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 // import { ref } from 'vue'
 import { BriefcaseIcon, MapPinIcon, CalendarIcon } from '@heroicons/vue/24/solid'
@@ -5,6 +6,11 @@ import { BriefcaseIcon, MapPinIcon, CalendarIcon } from '@heroicons/vue/24/solid
 import playercoachLogo from '@/assets/svg/playercoach.png'
 import nativeTeamsLogo from '@/assets/svg/native-teams.svg'
 
+defineOptions({
+    name: 'Experience',
+})
+
+// Variables
 const experienceList = [
     { id: 1, jobPosition: 'Front-End Developer', companyName: 'PlayerCoach', companyLocation: 'Canada', jobType: 'remote', startJob: 'Oct 2021 - Current', companyAvatar: playercoachLogo, description: 'PlayerCoach is a web application that offers digitalization of sports by enabling online booking and payment for training sessions, taking courses, following channels of desired athletes, competition leaderboards, a place for social interaction, and motivating players to visit the field more frequently.' },
     { id: 2, jobPosition: 'Front-End Developer', companyName: 'Native Teams', companyLocation: 'North Macedonia', jobType: 'fulltime', startJob: 'Feb 2023 - Current', companyAvatar: nativeTeamsLogo, description: 'Native Teams is empowering freelancers, remote workers and their employers with global work payments, payroll and tax management solutions, including employee benefits, visa support and employment tools. Everything you need to work remotely and stay compliant.' }
@@ -55,7 +61,7 @@ const experienceList = [
                         </div>
                     </div>
                     <div class="flex items-start justify-between space-y-1 sm:block sm:text-right">
-                        <div class="order-last inline-flex items-center rounded-lg bg-primary-500/20 px-2 py-1 text-xs font-medium text-primary-500">
+                        <div class="order-last inline-flex items-center rounded-lg bg-sky-500/20 px-2 py-1 text-xs font-medium text-sky-500 capitalize">
                             {{ job.jobType }}
                         </div>
                         <div class="flex items-center gap-1 text-sm font-medium text-gray-400 dark:text-slate-400">
@@ -64,10 +70,10 @@ const experienceList = [
                         </div>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 dark:text-slate-300">
+                <p class="text-sm text-gray-600 dark:text-slate-200">
                     {{ job.description }}
                 </p>
-                <div v-if="experienceList.length > 1" class="border-b border-dashed border-gray-200 dark:border-slate-600"></div>
+                <div v-if="index != experienceList.length - 1" class="border-b border-gray-200 dark:border-slate-600"></div>
             </div>
         </div>
         <!-- <PaginationTemplate

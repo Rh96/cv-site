@@ -16,7 +16,7 @@ const menuList = [
 <template>
     <div class="w-full px-2 space-y-5 sm:px-0">
         <TabGroup>
-            <TabList class="flex space-x-1 rounded-xl bg-gray-200 p-1">
+            <TabList class="flex space-x-1 rounded-xl bg-gray-200 p-1 dark:bg-slate-700/30">
                 <Tab
                     v-for="menuItem in menuList"
                     as="template"
@@ -28,8 +28,8 @@ const menuList = [
                             'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
                             'inline-flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1.5 text-xs font-medium',
                         selected
-                            ? 'bg-gray-50 text-dark'
-                            : 'hover:bg-gray-50 hover:text-gray-400',
+                            ? 'bg-gray-50 text-dark dark:bg-slate-700 dark:text-slate-300'
+                            : 'hover:bg-gray-50 hover:text-dark dark:hover:bg-slate-700 dark:text-slate-300',
                         ]"
                     >
                         <HeroIcon :icon="menuItem.icon" class="hidden h-4 w-4 sm:block" />

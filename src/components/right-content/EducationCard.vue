@@ -1,9 +1,15 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 // import { ref } from 'vue'
 import { CalendarIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/solid'
 // import PaginationTemplate from './components/PaginationTemplate.vue'
 import qinshiftLogo from '@/assets/svg/qinshift.jpg'
 
+defineOptions({
+    name: 'Education',
+})
+
+// Variables
 const educationList = [
     { id: 1, name: 'Qinshift Academy', logo: qinshiftLogo, startDate: '2019', endDate: '2020', studyRole: 'Web Developer' },
 ]
@@ -60,6 +66,7 @@ const licensesList = [
                             </div>
                         </div>
                     </div>
+                    <div v-if="index != educationList.length - 1" class="border-b border-gray-200 dark:border-slate-600"></div>
                 </div>
             </div>
         </div>
@@ -92,6 +99,7 @@ const licensesList = [
                             <ArrowTopRightOnSquareIcon class="h-4 w-4 stroke-2" />
                         </a>
                     </div>
+                    <div v-if="index != licensesList.length - 1" class="border-b border-gray-200 dark:border-slate-600"></div>
                 </div>
             </div>
             <!-- <PaginationTemplate
