@@ -1,36 +1,97 @@
 {
-    "resume": "Passionate about creating intuitive and visually stunning web experiences, I specialize in frontend development, bringing designs to life with pixel-perfect precision. Proficient in HTML, CSS, and JavaScript, I thrive on the challenges of crafting responsive and interactive user interfaces. With expertise in modern frameworks like React and Vue.js, I excel at building dynamic web applications that engage and delight users. A collaborative team player, I enjoy working closely with designers and backend developers to deliver seamless and impactful digital solutions. Constantly exploring new technologies and design trends, I am dedicated to pushing the boundaries of frontend development to create memorable online experiences.",
-    "information": "Informations",
-    "skills": "Skills",
-    "language": "Language",
-    "about": "About me",
-    "experience": "Experience",
-    "education": "Education",
-    "licenses": "Licenses and Certificates",
-    "project": "Projects",
-    "credential": "Credential",
-    "credential_code": "Credential Code",
+  "profile": {
+    "name" : "Rade Hrgovikj",
+    "job_title" : "Frontend Developer",
+    "social": {
+      "linkedin" : "Linkedin",
+      "upwork" : "Upwork"
+    },
     "settings": {
       "title": "Settings",
       "theme": "Theme",
       "dark_mode": "Enable dark mode?",
       "mk": "Macedonian",
       "en": "English"
-    },
-    "menu": {
-      "experience": "Experience",
-      "education": "Education",
-      "project": "Projects"
-    },
-    "language_level": {
-      "conversational": "Conversational",
-      "native": "Native"
-    },
-    "paginate": {
-      "count": "Showing {first} to {last} of {total} results",
-      "previous_page": "Previous page",
-      "next_page": "Next page",
-      "first_page": "First page",
-      "last_page": "last page"
+    } 
+  },
+  "information": {
+    "title" : "Informations",
+    "information_list": {
+      "email": "Mail address",
+      "date_of_birth": {
+        "dob": "28 November 1996",
+        "sub_text": "Years old"
+      },
+      "work_type": {
+        "text": "Remote or Fulltime",
+        "sub_text": "Work type"
+      }
     }
-  }
+  },
+  "skills": "Skills",
+  "language": {
+    "title": "Language",
+    "mk": {
+      "title": "Macedonian",
+      "level": "Native"
+    },
+    "en": {
+      "title": "English",
+      "level": "Conversational"
+    }
+  },
+  "resume": "Passionate about creating intuitive and visually stunning web experiences, I specialize in frontend development, bringing designs to life with pixel-perfect precision. Proficient in HTML, CSS, and JavaScript, I thrive on the challenges of crafting responsive and interactive user interfaces. With expertise in modern frameworks like React and Vue.js, I excel at building dynamic web applications that engage and delight users. A collaborative team player, I enjoy working closely with designers and backend developers to deliver seamless and impactful digital solutions. Constantly exploring new technologies and design trends, I am dedicated to pushing the boundaries of frontend development to create memorable online experiences.",
+  "about": "About me",
+  "menu": {
+    "experience": {
+      "title": "Experience",
+      "job_1": {
+        "position": "Frontend Developer",
+        "company_name": "PlayerCoach",
+        "location": "Canada",
+        "type": "remote",
+        "start_date": "Oct 2021 - Current",
+        "description": "PlayerCoach is a web application that offers digitalization of sports by enabling online booking and payment for training sessions, taking courses, following channels of desired athletes, competition leaderboards, a place for social interaction, and motivating players to visit the field more frequently."
+      },
+      "job_2": {
+        "position": "Frontend Developer",
+        "company_name": "Native Teams",
+        "location": "North Macedonia",
+        "type": "fulltime",
+        "start_date": "Feb 2023 - Current",
+        "description": "Native Teams is empowering freelancers, remote workers and their employers with global work payments, payroll and tax management solutions, including employee benefits, visa support and employment tools. Everything you need to work remotely and stay compliant."
+      }
+    },
+    "education": {
+      "title": "Education",
+      "education_1": {
+        "title": "Qinshift Academy",
+        "start_date": "2019",
+        "end_date": "2020",
+        "study_role": "Web Developer",
+        "licence": {
+          "title": "Web Developer",
+          "issued_date": "Issued Nov 2020"
+        }
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "project_1": {
+        "title": "Wave On The Way (WotW)",
+        "description": "You are a surfer, try to stay on the waves and keep away from the skulls as you collect coins. Get the best score and compete with your friends."
+      },
+      "project_2": {
+        "title": "Space Mates",
+        "description": "Space Mates is a 2D puzzle platformer. Try this game out and form your own description about it."
+      },
+      "project_3": {
+        "title": "Global Game Jam 2021",
+        "description": "Reminding us of the spirit of the Global Game Jam."
+      }
+    }
+  },
+  "licenses": "Licenses and Certificates",
+  "creditental": "Creditental",
+  "link": "Link"
+}

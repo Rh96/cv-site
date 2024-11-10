@@ -18,8 +18,8 @@ const isDarkMode = ref(false);
 const projectsList = [
     {
         id: 1,
-        name: 'Wave On The Way (WotW)',
-        description: 'You are a surfer, try to stay on the waves and keep away from the skulls as you collect coins. Get the best score and compete with your friends.',
+        name: 'menu.projects.project_1.title',
+        description: 'menu.projects.project_1.description',
         logo: waveOnTheWay,
         link: 'https://v3.globalgamejam.org/2017/games/wave-way-wotw',
         gameEngine: {
@@ -31,8 +31,8 @@ const projectsList = [
     },
     {
         id: 2,
-        name: 'Space Mates',
-        description: 'Space Mates is a 2D puzzle platformer. Try this game out and form your own description about it.',
+        name: 'menu.projects.project_2.title',
+        description: 'menu.projects.project_2.description',
         logo: spaceMates,
         link: 'https://v3.globalgamejam.org/2018/games/space-mates',
         gameEngine: {
@@ -44,8 +44,8 @@ const projectsList = [
     },
     {
         id: 3,
-        name: 'Global Game Jam 2021',
-        description: 'Reminding us of the spirit of the Global Game Jam.',
+        name: 'menu.projects.project_3.title',
+        description: 'menu.projects.project_3.description',
         logo: globalGameJam2021,
         link: 'https://v3.globalgamejam.org/2021/games/ggj-2021-3',
         gameEngine: {
@@ -90,7 +90,7 @@ onMounted(() => {
 
 <template>
     <div class="rounded-xl p-7 bg-white dark:bg-slate-700/30">
-        <h2 class="mb-5 text-lg font-semibold dark:text-slate-50">{{ $t('project') }}</h2>
+        <h2 class="mb-5 text-lg font-semibold dark:text-slate-50">{{ $t('menu.projects.title') }}</h2>
         <div
             v-for="(project, index) in projectsList"
             :key="index"
@@ -105,7 +105,7 @@ onMounted(() => {
             <div class="ml-3 w-full space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1.5">
-                        <div class="font-medium dark:text-slate-50">{{ project.name }}</div>
+                        <div class="font-medium dark:text-slate-50">{{ $t(project.name) }}</div>
                         <div class="flex space-x-5 text-gray-400 dark:text-slate-400">
                             <div class="flex items-center gap-1 text-sm font-medium">
                                 <img
@@ -127,7 +127,7 @@ onMounted(() => {
                     </div>
                 </div>
                 <p class="text-sm text-gray-600 dark:text-slate-300">
-                    {{ project.description }}
+                    {{ $t(project.description) }}
                 </p>
                 <a
                     :href="project.link"
@@ -135,7 +135,7 @@ onMounted(() => {
                     target="_blank"
                 >
                     <LinkIcon class="h-4 w-4 shrink-0 stroke-2" />
-                    <span>Link</span>
+                    <span>{{ $t('link') }}</span>
                 </a>
             </div>
         </div>

@@ -33,15 +33,15 @@ function calculateAge(dateOfBirth) {
 
 <template>
   <div class="rounded-xl p-7 bg-white dark:bg-slate-700/30">
-    <h2 class="mb-4 text-lg font-semibold dark:text-slate-50">{{ $t('information') }}</h2>
+    <h2 class="mb-4 text-lg font-semibold dark:text-slate-50">{{ $t('information.title') }}</h2>
     <!-- Info -->
     <div class="space-y-4">
       <!-- Email -->
-      <InformationContent icon="EnvelopeIcon" content="radehrgo96@gmail.com" subText="Mail address" />
+      <InformationContent icon="EnvelopeIcon" content="radehrgo96@gmail.com" :subText="$t('information.information_list.email')" />
       <!-- Dob -->
-      <InformationContent icon="CakeIcon" content="28 November 1996" :subText="calculateAge('28-11-1996') + ' ' + 'Years old'" />
+      <InformationContent icon="CakeIcon" :content="$t('information.information_list.date_of_birth.dob')" :subText="calculateAge('28-11-1996') + ' ' + $t('information.information_list.date_of_birth.sub_text')" />
       <!-- Work Type -->
-      <InformationContent icon="ComputerDesktopIcon" content="Remote or Fulltime" subText="Work type" />
+      <InformationContent icon="ComputerDesktopIcon" :content="$t('information.information_list.work_type.text')" :subText="$t('information.information_list.work_type.sub_text')" />
     </div>
   </div>
 </template>

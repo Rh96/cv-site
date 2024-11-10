@@ -6,9 +6,9 @@ import EducationCard from './EducationCard.vue'
 import ProjectsCard from './ProjectsCard.vue'
 
 const menuList = [
-    { name: 'menu.experience', icon: 'BriefcaseIcon' },
-    { name: 'menu.education', icon: 'AcademicCapIcon' },
-    { name: 'menu.project', icon: 'CodeBracketIcon' }
+    { name: 'menu.experience.title', icon: 'BriefcaseIcon' },
+    { name: 'menu.education.title', icon: 'AcademicCapIcon' },
+    { name: 'menu.projects.title', icon: 'CodeBracketIcon' }
 ]
 
 </script>

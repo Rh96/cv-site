@@ -20,8 +20,8 @@ import profilePicture from '@/assets/svg/profil.jpg'
 const isDarkMode = ref(false)
 const selectedLanguage = ref('en')
 const socialLinks = [
-    { id: 1, text: 'Linkedin', url: 'https://www.linkedin.com/in/rade-hrgovikj-032b28200' },
-    { id: 2, text: 'Upwork', url: 'https://www.upwork.com/freelancers/~01f36af482c9488613?mp_source=share' },
+    { id: 1, text: 'profile.social.linkedin', url: 'https://www.linkedin.com/in/rade-hrgovikj-032b28200' },
+    { id: 2, text: 'profile.social.upwork', url: 'https://www.upwork.com/freelancers/~01f36af482c9488613?mp_source=share' },
 ]
 const languages = [
     { id: 1, text: 'en', img_url: englishFlag },
@@ -67,8 +67,8 @@ function changeLanguage(lang) {
                 <div>
                     <!-- Description -->
                     <div>
-                        <h5 class="mb-2 text-xl font-medium leading-tight dark:text-white">Rade Hrgovikj</h5>
-                        <p class="text-neutral-500 dark:text-neutral-400">Frontend Developer</p>
+                        <h5 class="mb-2 text-xl font-medium leading-tight dark:text-white">{{ $t('profile.name') }}</h5>
+                        <p class="text-neutral-500 dark:text-neutral-400">{{ $t('profile.job_title') }}</p>
                     </div>
                     <!-- Social Links -->
                     <div class="inline-flex flex-wrap gap-1 mt-2">
@@ -80,7 +80,7 @@ function changeLanguage(lang) {
                             target="_blank"
                             class="cursor-pointer rounded-lg border border-gray-100 px-2 py-0.5 text-xs font-medium text-gray-400 hover:bg-sky-500/20 hover:text-sky-500 dark:border-slate-600 dark:hover:bg-sky-500/20"
                         >
-                            {{ linkProfile.text }}
+                            {{ $t(linkProfile.text) }}
                         </a>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ function changeLanguage(lang) {
                         <div class="bg-gray-100 py-4 px-5 dark:bg-slate-700">
                             <span class="flex items-center gap-2">
                                 <Cog8ToothIcon class="h-5 w-5 text-gray-500 dark:text-slate-200" />
-                                <span class="text-sm font-medium text-gray-900 dark:text-slate-50">{{ $t('settings.title') }}</span>
+                                <span class="text-sm font-medium text-gray-900 dark:text-slate-50">{{ $t('profile.settings.title') }}</span>
                             </span>
                         </div>
 
@@ -105,8 +105,8 @@ function changeLanguage(lang) {
                         <div class="grid gap-3 bg-white py-4 px-5 dark:bg-slate-600">
                             <div class="flex items-center justify-between rounded-lg transition duration-150 ease-in-out focus:outline-none focus-visible:ring focus-visible:ring-opacity-50">
                                 <div class="mr-4">
-                                    <p class="text-sm font-medium text-gray-900 dark:text-slate-50">{{ $t('settings.theme') }}</p>
-                                    <p class="text-sm text-gray-500 dark:text-slate-300">{{ $t('settings.dark_mode') }}</p>
+                                    <p class="text-sm font-medium text-gray-900 dark:text-slate-50">{{ $t('profile.settings.theme') }}</p>
+                                    <p class="text-sm text-gray-500 dark:text-slate-300">{{ $t('profile.settings.dark_mode') }}</p>
                                 </div>
                                 <Switch
                                     v-model="isDarkMode"
@@ -128,7 +128,7 @@ function changeLanguage(lang) {
                             <div class="relative">
                                 <Listbox v-model="selectedLanguage">
                                     <ListboxLabel class="mb-1 block text-sm font-medium leading-5 text-gray-700 dark:text-slate-50">
-                                        {{ $t('language') }}
+                                        {{ $t('language.title') }}
                                     </ListboxLabel>
 
                                     <ListboxButton class="relative flex w-full cursor-default items-center gap-2 rounded-lg bg-gray-100 py-2 pl-2 pr-10 text-left text-sm focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-300 dark:bg-slate-500">
@@ -138,7 +138,7 @@ function changeLanguage(lang) {
                                             class="h-7 w-7"
                                         />
                                         <span class="block truncate text-black dark:text-slate-200">
-                                            {{ $t(`settings.${selectedLanguage}`) }}
+                                            {{ $t(`profile.settings.${selectedLanguage}`) }}
                                         </span>
                                         <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                             <ChevronUpDownIcon
@@ -167,7 +167,7 @@ function changeLanguage(lang) {
                                             >
                                                 <img :src="language.img_url" alt="en-us" class="h-7 w-7">
                                                 <span class="block truncate dark:text-white">
-                                                    {{ $t(`settings.${language.text}`) }}
+                                                    {{ $t(`profile.settings.${language.text}`) }}
                                                 </span>
                                                 <span v-show="selected" class="absolute inset-y-0 right-4 flex items-center pl-3 text-sky-500">
                                                     <CheckIcon class="h-5 w-5" aria-hidden="true" />
