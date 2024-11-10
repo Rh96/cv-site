@@ -18,6 +18,7 @@ import profilePicture from '@/assets/svg/profil.jpg'
 
 // Variables
 const isDarkMode = ref(false)
+const selectedLanguage = ref('en')
 const socialLinks = [
     { id: 1, text: 'Linkedin', url: 'https://www.linkedin.com/in/rade-hrgovikj-032b28200' },
     { id: 2, text: 'Upwork', url: 'https://www.upwork.com/freelancers/~01f36af482c9488613?mp_source=share' },
@@ -26,11 +27,11 @@ const languages = [
     { id: 1, text: 'en', img_url: englishFlag },
     { id: 2, text: 'mk', img_url: macedonianFlag },
 ]
-const selectedLanguage = ref('en')
 
 // Hooks
 onMounted(() => {
     selectedLanguage.value = localStorage.getItem('language') || 'en'
+    isDarkMode.value = document.getElementById('html-root').classList.contains('dark') ? true : false
 })
 
 // Methods
@@ -38,8 +39,10 @@ function toggleDarkMode() {
   const element = document.getElementById('html-root')
   if (element.classList.contains('dark')) {
     element.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
   } else {
     element.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
   }
 }
 

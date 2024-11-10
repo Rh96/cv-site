@@ -1,11 +1,24 @@
 <script setup>
-// Components
 import Profile from './components/left-content/ProfileCard.vue'
 import InformationsCard from './components/left-content/InformationsCard.vue'
 import SkillsCard from './components/left-content/SkillsCard.vue'
 import LanguagesCard from './components/left-content/LanguagesCard.vue'
 import About from './components/right-content/AboutMe.vue'
 import TabListCard from './components/right-content/TabListCard.vue'
+
+// Load dark mode on page load based on user preference or OS setting
+function loadDarkMode() {
+  const element = document.getElementById('html-root');
+  
+  // Determine if dark mode should be enabled
+  const darkMode = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  if (darkMode) {
+    element.classList.add('dark')
+  } else {
+    element.classList.remove('dark')
+  }
+}
+loadDarkMode()
 
 </script>
 
@@ -30,7 +43,3 @@ import TabListCard from './components/right-content/TabListCard.vue'
     </div>
   </div>
 </template>
-
-<style>
-
-</style>
