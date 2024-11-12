@@ -4,6 +4,7 @@
 import { CalendarIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/solid'
 // import PaginationTemplate from './components/PaginationTemplate.vue'
 import qinshiftLogo from '@/assets/svg/qinshift.jpg'
+import qinshiftCertificate from '@/assets/svg/certificate-qinshift.pdf'
 
 defineOptions({
     name: 'Education',
@@ -14,7 +15,7 @@ const educationList = [
     { id: 1, name: 'menu.education.education_1.title', logo: qinshiftLogo, startDate: 'menu.education.education_1.start_date', endDate: 'menu.education.education_1.end_date', studyRole: 'menu.education.education_1.study_role' },
 ]
 const licensesList = [
-    { id: 1, name: 'menu.education.education_1.licence.title', logo: qinshiftLogo, creditentalLink: 'https://qinshiftacademy.com/en/programming-academy/', issuedDate: 'menu.education.education_1.licence.issued_date' },
+    { id: 1, name: 'menu.education.education_1.licence.title', logo: qinshiftLogo, link: qinshiftCertificate, issuedDate: 'menu.education.education_1.licence.issued_date' },
 ]
 
 // let currentPage = ref(1)
@@ -29,6 +30,11 @@ const licensesList = [
 // function updatedCurrentPage(updatedCurrentPageParam) {
 //     currentPage.value = updatedCurrentPageParam
 // }
+
+function openCertificate(creditentalLink) {
+    window.open(creditentalLink, "_blank")
+    return false
+}
 </script>
 
 <template>
@@ -91,9 +97,8 @@ const licensesList = [
                             <span class="text-sm font-medium">{{ $t(license.issuedDate) }}</span>
                         </div>
                         <a
-                            :href="license.creditentalLink"
                             class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gray-100 px-2 py-2 text-xs text-gray-400 hover:bg-gray-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-700"
-                            target="_blank"
+                            @click="openCertificate(license.link)"
                         >
                             <span>{{ $t('creditental') }}</span>
                             <ArrowTopRightOnSquareIcon class="h-4 w-4 stroke-2" />
